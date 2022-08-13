@@ -13,13 +13,13 @@ class Example extends Phaser.Scene
  
     create () 
     {
-        this.cameras.main.setBounds(0, 0, 1024, 2048);
+        this.cameras.main.setBounds(0, 0, 800, 2048);
     
-        this.add.image(0, 0, 'map').setOrigin(0).setScrollFactor(1).setScale(0.15);
+        this.add.image(0, 0, 'map').setOrigin(0).setScrollFactor(1).setScale(0.2);
     
         this.cursors = this.input.keyboard.createCursorKeys();
     
-        this.ship = this.physics.add.image(100, 100, 'ship').setCollideWorldBounds(true);;
+        this.ship = this.physics.add.image(50, 120, 'ship').setCollideWorldBounds(true);;
         // ship = this.add.image(400.5, 301.3, 'ship');
     
         this.cameras.main.startFollow(this.ship, true, 0.09, 0.09);
